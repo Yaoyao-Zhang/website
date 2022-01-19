@@ -251,7 +251,7 @@ message ContainerDevices {
 ```
 {{< note >}}
 cpu_ids in the `ContainerResources` in the `List` endpoint correspond to exclusive CPUs allocated
-to a partilar container. If the goal is to evaluate CPUs that belong to the shared pool, the `List`
+to a particular container. If the goal is to evaluate CPUs that belong to the shared pool, the `List`
 endpoint needs to be used in conjunction with the `GetAllocatableResources` endpoint as explained
 below:
 1. Call `GetAllocatableResources` to get a list of all the allocatable CPUs
@@ -279,7 +279,7 @@ update and Kubelet needs to be restarted to reflect the correct resource capacit
 
 
 ```gRPC
-// AllocatableResourcesResponses contains informations about all the devices known by the kubelet
+// AllocatableResourcesResponses contains information about all the devices known by the kubelet
 message AllocatableResourcesResponse {
     repeated ContainerDevices devices = 1;
     repeated int64 cpu_ids = 2;
